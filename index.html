@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AR Viewer</title>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://cdn.rawgit.com/jeromeetienne/ar.js/2.2.1/aframe/build/aframe-ar.min.js"></script>
 </head>
-<body>
-    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <a-scene embedded arjs>
-    <a-entity gltf-model="url(shopping_bag.glb)" position="0 0 0" scale="1 1 1"></a-entity>
-    </a-scene>
-
+<body style="margin: 0; overflow: hidden;">
+  <a-scene embedded arjs>
+    <!-- Load the 3D model -->
+    <a-entity 
+      gltf-model="url(model.glb)" 
+      position="0 0 -2" 
+      scale="1 1 1">
+    </a-entity>
+    <!-- Camera -->
+    <a-camera position="0 0 0"></a-camera>
+  </a-scene>
 </body>
 </html>
