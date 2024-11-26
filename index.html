@@ -10,12 +10,10 @@
 <body style="margin: 0; overflow: hidden;">
   <a-scene embedded arjs="sourceType: webcam; facingMode: environment;">
     <!-- Load the 3D model -->
-    <a-entity 
-      gltf-model="url(shopping_bag.glb)" 
-      position="0 0 -3" 
-      scale="1 1 1"
-      static-body>
+    <a-entity position="0 0 -3" id="model-holder">
+      <a-entity gltf-model="url(shopping_bag.glb)" position="0 0 0" scale="1 1 1"></a-entity>
     </a-entity>
+    <a-entity 
     <a-light type="ambient" intensity="1"></a-light>
     <!-- Camera -->
     <a-camera></a-camera>
